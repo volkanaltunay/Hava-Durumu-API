@@ -10,15 +10,16 @@
     <title>Hava Durumu</title>
 </head>
 <body>
- <nav class="navbar">
+ <!-- header -->
+    <nav class="navbar">
     <div class="logo">
       ☂️ SIRIUS
     </div>
     <div class="menu-toggle" id="mobileMenu">&#9776;</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="login.html">Giriş Yap</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hakkimizda.html">About Us</a></li>
+      <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
@@ -32,47 +33,47 @@
         <section id="showcase">
             <div class="content">
                 <h2><b>SIRIUS</b></h2>
-                <h4>Hava durumu tahminleri, şimdiki zaman tahminleri ve geçmişe yönelik bilgiler hızlı ve zarif bir şekilde.
+                <h4>Weather forecasts, nowcasts and history in a fast and elegant way
                 </h4>
             </div>
         </section>
-    <section class="products-section">
-  <br>
-  <h2><span class="highlight">Yeni</span> Ürünlerimiz</h2>
-  <div class="products-container">
-    <div class="product-card">
-      <div class="icon solar-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Enerji Gösterge Paneli İkonu" />
-      </div>
-      <h3 class="product-title">Enerji Gösterge Paneli</h3>
-      <p class="product-description">
-        Yenilenebilir enerji sektörü için kapsamlı bir görsel araç. Şebeke yönetimi ve enerji ticareti kararlarını optimize etmek için elektrik üretimi çıktısı ve ışınım ölçümleri (GHI, DNI, DHI) dahil olmak üzere önemli geçmiş, güncel ve tahmini güneş verilerine erişin.
+
+<!-- Data in the table  -->
+      <div class="api3-container">
+    <div class="api3-text-content">
+      <h5 class="api3-subtitle">One Call API 3.0</h5>
+      <p class="api3-description">
+        Choose the subscription plan <strong>"One Call by Call"</strong> and get access
+        to the various data for any coordinates with <strong>One Call API 3.0</strong>.
+        <br>1,000 API calls per day for free! <span class="api3-highlight">Pay as you call.</span>
       </p>
-      <button class="btn">Daha fazla bilgi edin</button>
+
+      <table class="api3-table">
+        <thead>
+          <tr>
+            <th>Included data</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Current</strong> weather</td><td>Now</td></tr>
+          <tr><td><strong>Minute</strong> forecast</td><td>Next hour</td></tr>
+          <tr><td><strong>Hourly</strong> forecast</td><td>Next 48 hours</td></tr>
+          <tr><td><strong>Daily</strong> forecast</td><td>Next 8 days</td></tr>
+          <tr><td><strong>Weather data</strong> by any timestamp</td><td>46+ years back - 4 days ahead forecast</td></tr>
+          <tr><td>National weather alerts</td><td>All available data</td></tr>
+          <tr><td><strong>Daily aggregation</strong></td><td>46+ years back - 1.5 years ahead forecast</td></tr>
+          <tr><td><strong>Weather overview</strong></td><td>Human-readable weather summary</td></tr>
+          <tr><td><strong>AI Weather Assistant</strong></td><td>Weather and weather-related advice in a human-readable format</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="product-card">
-      <div class="icon weather-alert-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/heavy-rain.png" alt="Aşırı Hava Durumu Gösterge Paneli İkonu" />
-      </div>
-      <h3 class="product-title">Aşırı Hava Durumu Gösterge Paneli</h3>
-      <p class="product-description">
-        Yüksek etkili hava olaylarının bir adım önünde olun. Bu gösterge paneli, fırtınalar ve sıcak hava dalgaları gibi aşırı olaylar için zamanında uyarılar, tahminler ve geçmiş veriler sunarak, dünyanın herhangi bir noktasında proaktif risk değerlendirmesi ve operasyonel planlama yapmanızı sağlar.
-      </p>
-      <button class="btn">Daha fazla bilgi edin</button>
-    </div>
-    <div class="product-card">
-      <div class="icon weather-control-icon">
-        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Hava Durumu Kontrol Paneli İkonu" />
-      </div>
-      <h3 class="product-title">Hava Durumu Kontrol Paneli</h3>
-      <p class="product-description">
-        Küresel hava durumu bilgileri için başvuracağınız kaynak. Dünya çapındaki herhangi bir yer için güncel koşulları, ayrıntılı tahminleri ve etkileşimli hava durumu haritalarını anında görselleştirin. Hava durumuyla ilgili tüm planlama ve analizleriniz için güçlü ve kullanıcı dostu bir arayüz.
-      </p>
-      <button class="btn">Pano'yu Aç</button>
+    <div class="api3-image-box">
+      <img src="images/one_call_api.png" alt="Weather Data Illustration">
     </div>
   </div>
-</section>
-<br><br>
+
+  <!-- Informational content -->
     <section class="weather-section">
     <h2>
       Use our <span class="highlight">Professional collections</span> to get extended weather data for any coordinates on the globe
@@ -108,40 +109,50 @@
         <p>(46+ years back)</p>
       </div>
     </div>
-
     <p class="called-by">
       <strong>Called by:</strong>
       geographic coordinates, zip/post code, city name, city ID, number of cities (only in current weather and forecast APIs)
     </p>
-
     <button class="learn-more-btn">Learn more</button>
-  </section>
+  </section> 
 
-<section class="grid-container">
-    <div class="card">
-      <h3>GitHub'da 20.000 OpenWeatherMap hava durumu API deposu</h3>
-      <p>Ortaklar sayfamızda PHP, Java, Python, GO ve daha fazlasında hava durumu API'lerimizi kullanarak çeşitli örnek projeleri keşfedin ve <span class="highlight">GitHub'daki 20.000</span>'den fazla depoya erişin.</p>
-      <button>Çözümleri görüntüle</button>
+<!-- Our new products -->
+<section class="products-section">
+  <br>
+  <h2>Our  <span class="highlight">new</span> products</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <div class="icon solar-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Enerji Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Lorem, ipsum dolor.</h3>
+      <p class="product-description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
+      </p>
+      <button class="btn">Learn more</button>
     </div>
-
-    <div class="card">
-      <h3>OpenWeatherMap API ile Google Hava Durumu Tabanlı Kampanya Yönetimi</h3>
-      <p>Reklam kampanyanızı Google AdWords üzerinden OpenWeatherMap API’siyle yürütün.</p>
-      <button>Devamını oku</button>
+    <div class="product-card">
+      <div class="icon weather-alert-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/heavy-rain.png" alt="Aşırı Hava Durumu Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Lorem ipsum dolor sit amet.</h3>
+      <p class="product-description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
+      </p>
+      <button class="btn">Learn more</button>
     </div>
-
-    <div class="card">
-      <h3>Hava istasyonunuzu OpenWeatherMap'e bağlayın</h3>
-      <p>Özel hava durumu istasyonları ağımıza katılmaktan çekinmeyin. Şu anda dünya genelinde 80.000'den fazla hava durumu istasyonumuz bulunmaktadır.</p>
-      <button>Bağlamak</button>
+    <div class="product-card">
+      <div class="icon weather-control-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Hava Durumu Kontrol Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Lorem ipsum dolor sit.</h3>
+      <p class="product-description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
+      </p>
+      <button class="btn">Open Dashboard</button>
     </div>
-
-    <div class="card">
-      <h3>Açık kaynaklı proje için hava durumu verilerini ücretsiz edinin</h3>
-      <p>Açık kaynak kodlu açık projeleri desteklemekten mutluluk duyarız. Çok sayıda API çağrısı yapmanız gerekiyorsa ve kodunuzu GitHub veya BitBucket'ta yayınladıysanız, lütfen bizimle iletişime geçin; size genişletilmiş koşullar sunalım.</p>
-      <button>Bize Ulaşın</button>
-    </div>
-  </section>
+  </div>
+</section><br><br>
 
     <!-- footer -->
     <footer class="footer">
@@ -160,39 +171,40 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Şirket</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">hakkımızda</a></li>
-                        <li><a href="#">hizmetlerimiz</a></li>
-                        <li><a href="#">gizlilik politikası</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our offices</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Ask a question</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Tahminler</h4>
+                    <h4>Product Collections</h4>
                     <ul>
-                        <li><a href="#">Grafikler</a></li>
-                        <li><a href="#">Veri kümeleri</a></li>
-                        <li><a href="#">Tahminlerimizin kalitesi</a></li>
-                        <li><a href="#">Tahminlerimiz hakkında</a></li>
-                        <li><a href="#">Tahminlere erişim </a></li>
+                        <li><a href="#">Current and Forecast APIs</a></li>
+                        <li><a href="#">Historical Weather Data</a></li>
+                        <li><a href="#">Weather Dashboard</a></li>
+                        <li><a href="#">Widgets</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Araştırma</h4>
+                    <h4>Subscription</h4>
                     <ul>
-                        <li><a href="#">Veri asimilasyonu</a></li>
-                        <li><a href="#">Modelleme ve Tahmin</a></li>
+                        <li><a href="#">How to start</a></li>
+                        <li><a href="#">Pricing</a></li>
                         <li><a href="#">İklim yeniden analizi</a></li>
-                        <li><a href="#">Projeler</a></li>
-                        <li><a href="#"> Özel Projeler</a></li>
+                        <li><a href="#">Subscribe for free</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
    </footer>
+
+  <!-- copyright -->
    <div class="copyright">
     <p>Copyright ©2025. Sirius Weather Forecasting Company. All Rights Reserved.</p>
    </div>
-
 </body>
 </html>
