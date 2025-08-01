@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Hava Durumu</title>
+</head>
+<body>
+ <nav class="navbar">
+    <div class="logo">
+      ☂️ SIRIUS
+    </div>
+    <div class="menu-toggle" id="mobileMenu">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="login.html">Giriş Yap</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+        <section id="showcase">
+            <div class="content">
+                <h2><b>SIRIUS</b></h2>
+                <h4>Hava durumu tahminleri, şimdiki zaman tahminleri ve geçmişe yönelik bilgiler hızlı ve zarif bir şekilde.
+                </h4>
+            </div>
+        </section>
+    <section class="products-section">
+  <br>
+  <h2><span class="highlight">Yeni</span> Ürünlerimiz</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <div class="icon solar-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Enerji Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Enerji Gösterge Paneli</h3>
+      <p class="product-description">
+        Yenilenebilir enerji sektörü için kapsamlı bir görsel araç. Şebeke yönetimi ve enerji ticareti kararlarını optimize etmek için elektrik üretimi çıktısı ve ışınım ölçümleri (GHI, DNI, DHI) dahil olmak üzere önemli geçmiş, güncel ve tahmini güneş verilerine erişin.
+      </p>
+      <button class="btn">Daha fazla bilgi edin</button>
+    </div>
+    <div class="product-card">
+      <div class="icon weather-alert-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/heavy-rain.png" alt="Aşırı Hava Durumu Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Aşırı Hava Durumu Gösterge Paneli</h3>
+      <p class="product-description">
+        Yüksek etkili hava olaylarının bir adım önünde olun. Bu gösterge paneli, fırtınalar ve sıcak hava dalgaları gibi aşırı olaylar için zamanında uyarılar, tahminler ve geçmiş veriler sunarak, dünyanın herhangi bir noktasında proaktif risk değerlendirmesi ve operasyonel planlama yapmanızı sağlar.
+      </p>
+      <button class="btn">Daha fazla bilgi edin</button>
+    </div>
+    <div class="product-card">
+      <div class="icon weather-control-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Hava Durumu Kontrol Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Hava Durumu Kontrol Paneli</h3>
+      <p class="product-description">
+        Küresel hava durumu bilgileri için başvuracağınız kaynak. Dünya çapındaki herhangi bir yer için güncel koşulları, ayrıntılı tahminleri ve etkileşimli hava durumu haritalarını anında görselleştirin. Hava durumuyla ilgili tüm planlama ve analizleriniz için güçlü ve kullanıcı dostu bir arayüz.
+      </p>
+      <button class="btn">Pano'yu Aç</button>
+    </div>
+  </div>
+</section>
+<br><br>
+    <section class="weather-section">
+    <h2>
+      Use our <span class="highlight">Professional collections</span> to get extended weather data for any coordinates on the globe
+    </h2>
+    <p class="description">
+      For professionals and specialists with middle and large sized projects, we recommend our Professional collections. They include either an extended data set, or various tools for receiving and displaying data and more.
+    </p>
+
+    <div class="icon-container">
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Current">
+        <h4>current<br>weather</h4>
+        <p>(current)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/clock--v1.png" alt="Hourly">
+        <h4>hourly<br>forecast</h4>
+        <p>(4 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/calendar--v1.png" alt="Daily">
+        <h4>daily<br>forecast</h4>
+        <p>(16 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/thermometer.png" alt="Climatic">
+        <h4>climatic<br>forecast</h4>
+        <p>(30 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/time-machine.png" alt="Historical">
+        <h4>historical<br>weather</h4>
+        <p>(46+ years back)</p>
+      </div>
+    </div>
+
+    <p class="called-by">
+      <strong>Called by:</strong>
+      geographic coordinates, zip/post code, city name, city ID, number of cities (only in current weather and forecast APIs)
+    </p>
+
+    <button class="learn-more-btn">Learn more</button>
+  </section>
+
+<section class="grid-container">
+    <div class="card">
+      <h3>GitHub'da 20.000 OpenWeatherMap hava durumu API deposu</h3>
+      <p>Ortaklar sayfamızda PHP, Java, Python, GO ve daha fazlasında hava durumu API'lerimizi kullanarak çeşitli örnek projeleri keşfedin ve <span class="highlight">GitHub'daki 20.000</span>'den fazla depoya erişin.</p>
+      <button>Çözümleri görüntüle</button>
+    </div>
+
+    <div class="card">
+      <h3>OpenWeatherMap API ile Google Hava Durumu Tabanlı Kampanya Yönetimi</h3>
+      <p>Reklam kampanyanızı Google AdWords üzerinden OpenWeatherMap API’siyle yürütün.</p>
+      <button>Devamını oku</button>
+    </div>
+
+    <div class="card">
+      <h3>Hava istasyonunuzu OpenWeatherMap'e bağlayın</h3>
+      <p>Özel hava durumu istasyonları ağımıza katılmaktan çekinmeyin. Şu anda dünya genelinde 80.000'den fazla hava durumu istasyonumuz bulunmaktadır.</p>
+      <button>Bağlamak</button>
+    </div>
+
+    <div class="card">
+      <h3>Açık kaynaklı proje için hava durumu verilerini ücretsiz edinin</h3>
+      <p>Açık kaynak kodlu açık projeleri desteklemekten mutluluk duyarız. Çok sayıda API çağrısı yapmanız gerekiyorsa ve kodunuzu GitHub veya BitBucket'ta yayınladıysanız, lütfen bizimle iletişime geçin; size genişletilmiş koşullar sunalım.</p>
+      <button>Bize Ulaşın</button>
+    </div>
+  </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h2>SIRIUS</h2>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                        <a href="#"><i class="fab fa-twitter"></i></a> 
+                        <a href="#"><i class="fab fa-instagram"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                        <a href="#"><i class="fa-brands fa-google-play"></i></a>
+                        <a href="#"><i class="fa-brands fa-app-store"></i></a>
+                
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="#">hakkımızda</a></li>
+                        <li><a href="#">hizmetlerimiz</a></li>
+                        <li><a href="#">gizlilik politikası</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tahminler</h4>
+                    <ul>
+                        <li><a href="#">Grafikler</a></li>
+                        <li><a href="#">Veri kümeleri</a></li>
+                        <li><a href="#">Tahminlerimizin kalitesi</a></li>
+                        <li><a href="#">Tahminlerimiz hakkında</a></li>
+                        <li><a href="#">Tahminlere erişim </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Araştırma</h4>
+                    <ul>
+                        <li><a href="#">Veri asimilasyonu</a></li>
+                        <li><a href="#">Modelleme ve Tahmin</a></li>
+                        <li><a href="#">İklim yeniden analizi</a></li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#"> Özel Projeler</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <div class="copyright">
+    <p>Copyright ©2025. Sirius Weather Forecasting Company. All Rights Reserved.</p>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Hava Durumu</title>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+      ☂️ SIRIUS
+    </div>
+    <div class="menu-toggle" id="mobileMenu">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Anasayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="login.html">Giriş Yap</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const toggle = document.getElementById('mobileMenu');
+    const nav = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+  
+        <section id="showcase">
+            <div class="content">
+                <h2><b>SIRIUS</b></h2>
+                <h4>Hava durumu tahminleri, şimdiki zaman tahminleri ve geçmişe yönelik bilgiler hızlı ve zarif bir şekilde.
+                </h4>
+            </div>
+        </section>
+    
+    <h1>Hava Durumu</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Bir Şehir Adı Giriniz</h3>
+            <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo" class="text">
+            <button class="search-btn">Search</button>
+            <div class="separator"></div>
+            <button class="location-btn">Mevcut Konumu Kullan</button>
+              <div class="separator"></div>
+               
+         <!-- Son Aramalar buraya -->
+          <div class="recent-searches">
+              <h3>Son Aramalar</h3>
+              <ul class="search-history"></ul>
+          </div>
+
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>______ (_______)</h2>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                </div>
+            </div>
+            <div class="days-forecast">
+                <h2>5-Günlük Tahmin</h2>
+                <ul class="weather-cards">
+                    <li class="card"> 
+                     <h3>(_____)</h3>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                    </li>
+                    <li class="card"> 
+                     <h3>(_____)</h3>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                    </li>
+                    <li class="card"> 
+                     <h3>(_____)</h3>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                    </li>
+                    <li class="card"> 
+                     <h3>(_____)</h3>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                    </li>
+                    <li class="card"> 
+                     <h3>(_____)</h3>
+                    <h4>Sıcaklık: __°C</h4>
+                    <h4>Rüzgar: __ M/S</h4>
+                    <h4>Nem: __%</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-box">
+  <div class="info-header">
+    <img src="https://img.icons8.com/ios/50/clock--v1.png" alt="clock icon" class="info-icon" />
+    <strong>Güncelleme her gün saat 14.00’e kadar yapılmaktadır. (TSİ)</strong>
+  </div>
+  <ul class="info-list">
+    <li><a href="#">Saatlik tahminlerde</a> “Beklenen Hadise” kısmında verilen hava durumu, geçmiş 3 saatlik periyot içindeki hâkim hava durumunu göstermektedir.</li>
+    <li><a href="#">Saatlik tahminlerde</a> “Rüzgâr Hamlesi” kısmında verilen değer, geçmiş 3 saatlik periyot içinde rüzgâr hızındaki ani artışı temsil etmektedir.</li>
+    <li><a href="#">Saatlik tahminlerde "Hissedilen sıcaklık"</a>, aynı saatte tahmin edilen hava sıcaklığı ile nispi nem ve rüzgâr değerlerine göre hesaplanmaktadır. Bu sıcaklık, iklimsel çevre, giysilerin ısı direnci, vücut yapısı ve kişisel durumdan olduğu kadar, termometre sıcaklığı, nispi nem, rüzgâr ve radyasyon gibi dört meteorolojik faktörden etkilendiği için sübjektif bir kavramdır.</li>
+    <li>Diğer tahmin bilgileri, tahmini yapılan zaman civarında beklenen değerleri göstermektedir.</li>
+    <li>Bu sayfada kullanılan <a href="#">HAVA TAHMİNİ simgeleri</a> ve <a href="#">SON DURUM simgelerinin</a> açıklamalarına buradan ulaşabilirsiniz.</li>
+  </ul>
+</div>
+
+<!-- brands -->
+
+      <div class="brands">
+        <div class="main-brands">
+            <div class="brands-a">
+                <a href="https://pigasoft.com/tr"><img src="images/marka-2.png" ></a>
+            </div>
+            <div class="brands-a">
+                <a href="https://www.amazon.com.tr/"><img src="images/marka-3.png" ></a>
+            </div>
+            <div class="brands-a">
+                <a href="https://pilotgarage.com/tr"><img src="images/marka-1.png" ></a>
+                
+            </div>
+        </div>
+      </div>
+
+      <div class="api3-container">
+    <div class="api3-text-content">
+      <h5 class="api3-subtitle">One Call API 3.0</h5>
+      <p class="api3-description">
+        Choose the subscription plan <strong>"One Call by Call"</strong> and get access
+        to the various data for any coordinates with <strong>One Call API 3.0</strong>.
+        <br>1,000 API calls per day for free! <span class="api3-highlight">Pay as you call.</span>
+      </p>
+
+      <table class="api3-table">
+        <thead>
+          <tr>
+            <th>Included data</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Current</strong> weather</td><td>Now</td></tr>
+          <tr><td><strong>Minute</strong> forecast</td><td>Next hour</td></tr>
+          <tr><td><strong>Hourly</strong> forecast</td><td>Next 48 hours</td></tr>
+          <tr><td><strong>Daily</strong> forecast</td><td>Next 8 days</td></tr>
+          <tr><td><strong>Weather data</strong> by any timestamp</td><td>46+ years back - 4 days ahead forecast</td></tr>
+          <tr><td>National weather alerts</td><td>All available data</td></tr>
+          <tr><td><strong>Daily aggregation</strong></td><td>46+ years back - 1.5 years ahead forecast</td></tr>
+          <tr><td><strong>Weather overview</strong></td><td>Human-readable weather summary</td></tr>
+          <tr><td><strong>AI Weather Assistant</strong></td><td>Weather and weather-related advice in a human-readable format</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="api3-image-box">
+      <img src="images/one_call_api.png" alt="Weather Data Illustration">
+    </div>
+  </div>
+
+    <section class="weather-section">
+    <h2>
+      Use our <span class="highlight">Professional collections</span> to get extended weather data for any coordinates on the globe
+    </h2>
+    <p class="description">
+      For professionals and specialists with middle and large sized projects, we recommend our Professional collections. They include either an extended data set, or various tools for receiving and displaying data and more.
+    </p>
+
+    <div class="icon-container">
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Current">
+        <h4>current<br>weather</h4>
+        <p>(current)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/clock--v1.png" alt="Hourly">
+        <h4>hourly<br>forecast</h4>
+        <p>(4 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/calendar--v1.png" alt="Daily">
+        <h4>daily<br>forecast</h4>
+        <p>(16 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/thermometer.png" alt="Climatic">
+        <h4>climatic<br>forecast</h4>
+        <p>(30 days)</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/time-machine.png" alt="Historical">
+        <h4>historical<br>weather</h4>
+        <p>(46+ years back)</p>
+      </div>
+    </div>
+
+    <p class="called-by">
+      <strong>Called by:</strong>
+      geographic coordinates, zip/post code, city name, city ID, number of cities (only in current weather and forecast APIs)
+    </p>
+
+    <button class="learn-more-btn">Learn more</button>
+  </section><br><br><br>
+
+          <div class="api3-container">
+    <div class="api3-text-content">
+      <p class="api3-description">
+
+        For each point on the globe, we provide historical, current and.
+        <br>forecasted weather data via light-speed APIs.
+        <br><strong>Minute-by-minute forecast</strong>
+        <br><br><strong>Minute-by-minute forecast</strong>
+        <br>hourly (4-day), daily (16-day), 30-day climatic forecast
+        <br><br><strong>Historical data</strong><br>
+        with 46+ years archive for any coordinates
+      </p>
+    </div>
+    <div class="api3-image-box">
+      <img src="images/datapng.png" alt="Weather Data Illustration">
+    </div>
+  </div><br><br><br>
+
+   <div class="renk"> 
+            <div class="api3-container">
+      <p class="api3-description">
+        Detailed forecasts available by city name, city ID, geographic <br>coordinates or postal/ZIP code.
+        <br>
+        <br><strong>How to obtain</strong>
+        <br>API<br>Bulks
+        <br>A variety of subscriptions with various limits on calls/min, data availability, and service
+        <br><br><strong>Historical data</strong><br>
+        with 46+ years archive for any coordinates
+      </p>
+
+    <div class="api3-image-box">
+      <img src="images/forecasted_weather_data.png" alt="Weather Data Illustration">
+    </div>
+    </div>
+  </div>
+
+            <div class="api3-container">
+      <p class="api3-description">
+        Our technology <strong>Time Machine</strong>, has allowed us to enhance data <br>in the Historical Weather Collection: historical weather data is now <br> available for any coordinates and the depth of historical data has <br> been extended to 46+ years.
+        <br>
+        <br><strong>How to obtain</strong>
+        <br><strong>Marketplace of prepared data sets</strong>
+        <br>(cities, zip codes, grids)
+        <br><br><strong>On-the-fly bulks</strong><br>
+        for customized lists of coordinates
+        <br><br><strong>APIs </strong>(city-based, up to 1 year back; subscriptions with various<br>limits on calls/min, data availability, and service)
+      </p>
+
+    <div class="api3-image-box">
+      <img src="images/historical_data_new.png" alt="Weather Data Illustration">
+    </div>
+    </div>
+
+    <div class="renk">
+      <div class="api3-container">
+      <p class="api3-description">
+        Access current weather data for any location on Earth including <br> over 200,000 cities! The data is frequently updated based on the <br> global and local weather models, satellites, radars and a vast <br> network of weather stations.
+        <br><br>
+        <br><strong>How to obtain</strong>
+        <br><br><strong>APIs</strong>
+        <br>(subscriptions with various limits on calls/min, data <br> availability, and service)
+        <br><br><strong>Prepared bulks</strong><br>
+        (cities, zip codes)
+      </p>
+
+    <div class="api3-image-box">
+      <img src="images/current.png" alt="Weather Data Illustration">
+    </div>
+    </div>
+  </div>
+
+<section class="products-section">
+  <br>
+  <h2><span class="highlight">Yeni</span> Ürünlerimiz</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <div class="icon solar-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Enerji Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Enerji Gösterge Paneli</h3>
+      <p class="product-description">
+        Yenilenebilir enerji sektörü için kapsamlı bir görsel araç. Şebeke yönetimi ve enerji ticareti kararlarını optimize etmek için elektrik üretimi çıktısı ve ışınım ölçümleri (GHI, DNI, DHI) dahil olmak üzere önemli geçmiş, güncel ve tahmini güneş verilerine erişin.
+      </p>
+      <button class="btn">Daha fazla bilgi edin</button>
+    </div>
+    <div class="product-card">
+      <div class="icon weather-alert-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/heavy-rain.png" alt="Aşırı Hava Durumu Gösterge Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Aşırı Hava Durumu Gösterge Paneli</h3>
+      <p class="product-description">
+        Yüksek etkili hava olaylarının bir adım önünde olun. Bu gösterge paneli, fırtınalar ve sıcak hava dalgaları gibi aşırı olaylar için zamanında uyarılar, tahminler ve geçmiş veriler sunarak, dünyanın herhangi bir noktasında proaktif risk değerlendirmesi ve operasyonel planlama yapmanızı sağlar.
+      </p>
+      <button class="btn">Daha fazla bilgi edin</button>
+    </div>
+    <div class="product-card">
+      <div class="icon weather-control-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Hava Durumu Kontrol Paneli İkonu" />
+      </div>
+      <h3 class="product-title">Lorem ipsum dolor sit.</h3>
+      <p class="product-description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
+      </p>
+      <button class="btn">Pano'yu Aç</button>
+    </div>
+  </div>
+</section>
+
+<section class="grid-container">
+    <div class="card">
+      <h3>GitHub'da 20.000 OpenWeatherMap hava durumu API deposu</h3>
+      <p>Ortaklar sayfamızda PHP, Java, Python, GO ve daha fazlasında hava durumu API'lerimizi kullanarak çeşitli örnek projeleri keşfedin ve <span class="highlight">GitHub'daki 20.000</span>'den fazla depoya erişin.</p>
+      <button>Çözümleri görüntüle</button>
+    </div>
+
+    <div class="card">
+      <h3>OpenWeatherMap API ile Google Hava Durumu Tabanlı Kampanya Yönetimi</h3>
+      <p>Reklam kampanyanızı Google AdWords üzerinden OpenWeatherMap API’siyle yürütün.</p>
+      <button>Devamını oku</button>
+    </div>
+
+    <div class="card">
+      <h3>Hava istasyonunuzu OpenWeatherMap'e bağlayın</h3>
+      <p>Özel hava durumu istasyonları ağımıza katılmaktan çekinmeyin. Şu anda dünya genelinde 80.000'den fazla hava durumu istasyonumuz bulunmaktadır.</p>
+      <button>Bağlamak</button>
+    </div>
+
+    <div class="card">
+      <h3>Açık kaynaklı proje için hava durumu verilerini ücretsiz edinin</h3>
+      <p>Açık kaynak kodlu açık projeleri desteklemekten mutluluk duyarız. Çok sayıda API çağrısı yapmanız gerekiyorsa ve kodunuzu GitHub veya BitBucket'ta yayınladıysanız, lütfen bizimle iletişime geçin; size genişletilmiş koşullar sunalım.</p>
+      <button>Bize Ulaşın</button>
+    </div>
+  </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h2>SIRIUS</h2>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                        <a href="#"><i class="fab fa-twitter"></i></a> 
+                        <a href="#"><i class="fab fa-instagram"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                        <a href="#"><i class="fa-brands fa-google-play"></i></a>
+                        <a href="#"><i class="fa-brands fa-app-store"></i></a>
+                
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="#">hakkımızda</a></li>
+                        <li><a href="#">hizmetlerimiz</a></li>
+                        <li><a href="#">gizlilik politikası</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tahminler</h4>
+                    <ul>
+                        <li><a href="#">Grafikler</a></li>
+                        <li><a href="#">Veri kümeleri</a></li>
+                        <li><a href="#">Tahminlerimizin kalitesi</a></li>
+                        <li><a href="#">Tahminlerimiz hakkında</a></li>
+                        <li><a href="#">Tahminlere erişim </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Araştırma</h4>
+                    <ul>
+                        <li><a href="#">Veri asimilasyonu</a></li>
+                        <li><a href="#">Modelleme ve Tahmin</a></li>
+                        <li><a href="#">İklim yeniden analizi</a></li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#"> Özel Projeler</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <div class="copyright">
+    <p>Copyright ©2025. Sirius Weather Forecasting Company. All Rights Reserved.</p>
+   </div>
+
+   <div class="cookie-box" id="cookieBox">
+  <p>
+    Web sitemiz çerezleri kullanmaktadır. Devam ederek çerez kullanımını kabul etmiş olursunuz.
+  </p>
+  <button onclick="document.getElementById('cookieBox').style.display='none'">
+    Anladım
+  </button>
+</div>
+
+</body>
+</html>

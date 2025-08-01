@@ -1,0 +1,5 @@
+// Yazıları lorem olarak değiştir. Kalan ifadeleri de ingilizce yaz.
+//resimli ve yazı olan bölümlerin her birine ayrı isim ver.
+//Hataları alter olmaktaj kaldır. toastr kullan.
+//bekleme sürecinin kullanıcı tarafından görünmesini sağla
+
