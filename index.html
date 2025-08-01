@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <title>Hava Durumu</title>
+    <title>SIRIUS</title>
 </head>
 <body>
     <nav class="navbar">
@@ -16,9 +16,9 @@
     </div>
     <div class="menu-toggle" id="mobileMenu">&#9776;</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="login.html">Giriş Yap</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="hakkimizda.html">About Us</a></li>
+      <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
@@ -33,24 +33,24 @@
         <section id="showcase">
             <div class="content">
                 <h2><b>SIRIUS</b></h2>
-                <h4>Hava durumu tahminleri, şimdiki zaman tahminleri ve geçmişe yönelik bilgiler hızlı ve zarif bir şekilde.
+                <h4>Weather forecasts, nowcasts and history in a fast and elegant way
                 </h4>
             </div>
         </section>
     
-    <h1>Hava Durumu</h1>
+    <h1>Weather Dashboard</h1>
     <div class="container">
         <div class="weather-input">
-            <h3>Bir Şehir Adı Giriniz</h3>
+            <h3>Enter a City Name</h3>
             <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo" class="text">
             <button class="search-btn">Search</button>
             <div class="separator"></div>
-            <button class="location-btn">Mevcut Konumu Kullan</button>
+            <button class="location-btn">Use Current Location</button>
               <div class="separator"></div>
                
-         <!-- Son Aramalar buraya -->
+         <!-- Recent Searches -->
           <div class="recent-searches">
-              <h3>Son Aramalar</h3>
+              <h3>Recent Searches</h3>
               <ul class="search-history"></ul>
           </div>
 
@@ -59,43 +59,43 @@
             <div class="current-weather">
                 <div class="details">
                     <h2>______ (_______)</h2>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temperature: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                 </div>
             </div>
             <div class="days-forecast">
-                <h2>5-Günlük Tahmin</h2>
+                <h2>5-Day Forecast</h2>
                 <ul class="weather-cards">
                     <li class="card"> 
                      <h3>(_____)</h3>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temp: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                     </li>
                     <li class="card"> 
                      <h3>(_____)</h3>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temp: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                     </li>
                     <li class="card"> 
                      <h3>(_____)</h3>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temp: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                     </li>
                     <li class="card"> 
                      <h3>(_____)</h3>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temp: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                     </li>
                     <li class="card"> 
                      <h3>(_____)</h3>
-                    <h4>Sıcaklık: __°C</h4>
-                    <h4>Rüzgar: __ M/S</h4>
-                    <h4>Nem: __%</h4>
+                    <h4>Temp: __°C</h4>
+                    <h4>Wind: __ M/S</h4>
+                    <h4>Humidity: __%</h4>
                     </li>
                 </ul>
             </div>
@@ -105,14 +105,16 @@
     <div class="info-box">
   <div class="info-header">
     <img src="https://img.icons8.com/ios/50/clock--v1.png" alt="clock icon" class="info-icon" />
-    <strong>Güncelleme her gün saat 14.00’e kadar yapılmaktadır. (TSİ)</strong>
+    <strong>Updates are made daily by 14:00 local time (TSİ)</strong>
   </div>
   <ul class="info-list">
-    <li><a href="#">Saatlik tahminlerde</a> “Beklenen Hadise” kısmında verilen hava durumu, geçmiş 3 saatlik periyot içindeki hâkim hava durumunu göstermektedir.</li>
-    <li><a href="#">Saatlik tahminlerde</a> “Rüzgâr Hamlesi” kısmında verilen değer, geçmiş 3 saatlik periyot içinde rüzgâr hızındaki ani artışı temsil etmektedir.</li>
-    <li><a href="#">Saatlik tahminlerde "Hissedilen sıcaklık"</a>, aynı saatte tahmin edilen hava sıcaklığı ile nispi nem ve rüzgâr değerlerine göre hesaplanmaktadır. Bu sıcaklık, iklimsel çevre, giysilerin ısı direnci, vücut yapısı ve kişisel durumdan olduğu kadar, termometre sıcaklığı, nispi nem, rüzgâr ve radyasyon gibi dört meteorolojik faktörden etkilendiği için sübjektif bir kavramdır.</li>
-    <li>Diğer tahmin bilgileri, tahmini yapılan zaman civarında beklenen değerleri göstermektedir.</li>
-    <li>Bu sayfada kullanılan <a href="#">HAVA TAHMİNİ simgeleri</a> ve <a href="#">SON DURUM simgelerinin</a> açıklamalarına buradan ulaşabilirsiniz.</li>
+    <li><a href="#">In hourly forecasts</a>, the "Expected Phenomenon" section indicates the prevailing weather condition observed in the previous 3-hour period.</li>
+    <li><a href="#">In hourly forecasts</a>  the value given in the "Wind Gust" section represents the sudden increase in wind speed during the previous 3-hour period.</li>
+    <li><a href="#">The "Feels Like Temperature"</a>,in hourly forecasts is calculated based on the forecasted air temperature at that time, relative humidity, and wind values. This temperature is a subjective concept, influenced not only by climatic environment, clothing insulation, body structure, and personal factors, but also by four main meteorological elements: thermometer temperature, relative humidity, wind, and radiation.</li>
+    <li>Other forecast information reflects the expected values around the forecasted time.</li>
+    <li>You can access the explanations of the <a href="#">WEATHER FORECAST</a> icons and <a href="#"> CURRENT CONDITION</a> icons used on this page here.
+
+</li>
   </ul>
 </div>
 
@@ -285,27 +287,27 @@
 
 <section class="products-section">
   <br>
-  <h2><span class="highlight">Yeni</span> Ürünlerimiz</h2>
+  <h2>Our  <span class="highlight">new</span> products</h2>
   <div class="products-container">
     <div class="product-card">
       <div class="icon solar-icon">
         <img src="https://img.icons8.com/ios-filled/50/000000/solar-panel.png" alt="Enerji Gösterge Paneli İkonu" />
       </div>
-      <h3 class="product-title">Enerji Gösterge Paneli</h3>
+      <h3 class="product-title">Lorem, ipsum dolor.</h3>
       <p class="product-description">
-        Yenilenebilir enerji sektörü için kapsamlı bir görsel araç. Şebeke yönetimi ve enerji ticareti kararlarını optimize etmek için elektrik üretimi çıktısı ve ışınım ölçümleri (GHI, DNI, DHI) dahil olmak üzere önemli geçmiş, güncel ve tahmini güneş verilerine erişin.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
       </p>
-      <button class="btn">Daha fazla bilgi edin</button>
+      <button class="btn">Learn more</button>
     </div>
     <div class="product-card">
       <div class="icon weather-alert-icon">
         <img src="https://img.icons8.com/ios-filled/50/000000/heavy-rain.png" alt="Aşırı Hava Durumu Gösterge Paneli İkonu" />
       </div>
-      <h3 class="product-title">Aşırı Hava Durumu Gösterge Paneli</h3>
+      <h3 class="product-title">Lorem ipsum dolor sit amet.</h3>
       <p class="product-description">
-        Yüksek etkili hava olaylarının bir adım önünde olun. Bu gösterge paneli, fırtınalar ve sıcak hava dalgaları gibi aşırı olaylar için zamanında uyarılar, tahminler ve geçmiş veriler sunarak, dünyanın herhangi bir noktasında proaktif risk değerlendirmesi ve operasyonel planlama yapmanızı sağlar.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
       </p>
-      <button class="btn">Daha fazla bilgi edin</button>
+      <button class="btn">Learn more</button>
     </div>
     <div class="product-card">
       <div class="icon weather-control-icon">
@@ -315,34 +317,34 @@
       <p class="product-description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat facilis atque reiciendis sed doloremque recusandae aperiam magni, laboriosam neque maxime vel, at sapiente dolores. Expedita, minima. Asperiores nam saepe repudiandae eos facilis eius laboriosam, quas praesentium quasi fugit amet, natus aut eum! Molestias laudantium expedita fuga odit quae, corrupti debitis.
       </p>
-      <button class="btn">Pano'yu Aç</button>
+      <button class="btn">Open Dashboard</button>
     </div>
   </div>
 </section>
 
 <section class="grid-container">
     <div class="card">
-      <h3>GitHub'da 20.000 OpenWeatherMap hava durumu API deposu</h3>
-      <p>Ortaklar sayfamızda PHP, Java, Python, GO ve daha fazlasında hava durumu API'lerimizi kullanarak çeşitli örnek projeleri keşfedin ve <span class="highlight">GitHub'daki 20.000</span>'den fazla depoya erişin.</p>
-      <button>Çözümleri görüntüle</button>
+      <h3>20,000 OpenWeatherMap weather API repositories on GitHub</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium adipisci in saepe laborum necessitatibus, ab repudiandae optio natus magni. Eaque eos dicta laboriosam iste ipsa rem explicabo voluptatem quibusdam?.</p>
+      <button>View solutions</button>
     </div>
 
     <div class="card">
-      <h3>OpenWeatherMap API ile Google Hava Durumu Tabanlı Kampanya Yönetimi</h3>
-      <p>Reklam kampanyanızı Google AdWords üzerinden OpenWeatherMap API’siyle yürütün.</p>
-      <button>Devamını oku</button>
+      <h3>Google Weather-Based Campaign Management with OpenWeatherMap API</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam unde nihil error, ipsa maiores quos ea, quaerat atque nam quis enim, quas deserunt perspiciatis deleniti reiciendis tempore iste labore aliquam!</p>
+      <button>Read more</button>
     </div>
 
     <div class="card">
-      <h3>Hava istasyonunuzu OpenWeatherMap'e bağlayın</h3>
-      <p>Özel hava durumu istasyonları ağımıza katılmaktan çekinmeyin. Şu anda dünya genelinde 80.000'den fazla hava durumu istasyonumuz bulunmaktadır.</p>
-      <button>Bağlamak</button>
+      <h3>Connect your weather station to OpenWeatherMapn</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur assumenda deleniti non voluptate doloribus quod harum rem, aliquam ipsa beatae adipisci porro qui consectetur odit aperiam accusantium illum fuga provident?</p>
+      <button>Connect</button>
     </div>
 
     <div class="card">
-      <h3>Açık kaynaklı proje için hava durumu verilerini ücretsiz edinin</h3>
-      <p>Açık kaynak kodlu açık projeleri desteklemekten mutluluk duyarız. Çok sayıda API çağrısı yapmanız gerekiyorsa ve kodunuzu GitHub veya BitBucket'ta yayınladıysanız, lütfen bizimle iletişime geçin; size genişletilmiş koşullar sunalım.</p>
-      <button>Bize Ulaşın</button>
+      <h3>Get weather data for free for open source project</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore assumenda voluptatem in nisi minus veritatis omnis maxime incidunt, aperiam perferendis et unde quam at vitae consectetur vel. Optio, odit provident.</p>
+      <button>Contact us</button>
     </div>
   </section>
 
@@ -363,31 +365,31 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Şirket</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">hakkımızda</a></li>
-                        <li><a href="#">hizmetlerimiz</a></li>
-                        <li><a href="#">gizlilik politikası</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our offices</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Ask a question</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Tahminler</h4>
+                    <h4>Product Collections</h4>
                     <ul>
-                        <li><a href="#">Grafikler</a></li>
-                        <li><a href="#">Veri kümeleri</a></li>
-                        <li><a href="#">Tahminlerimizin kalitesi</a></li>
-                        <li><a href="#">Tahminlerimiz hakkında</a></li>
-                        <li><a href="#">Tahminlere erişim </a></li>
+                        <li><a href="#">Current and Forecast APIs</a></li>
+                        <li><a href="#">Historical Weather Data</a></li>
+                        <li><a href="#">Weather Dashboard</a></li>
+                        <li><a href="#">Widgets</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Araştırma</h4>
+                    <h4>Subscription</h4>
                     <ul>
-                        <li><a href="#">Veri asimilasyonu</a></li>
-                        <li><a href="#">Modelleme ve Tahmin</a></li>
+                        <li><a href="#">How to start</a></li>
+                        <li><a href="#">Pricing</a></li>
                         <li><a href="#">İklim yeniden analizi</a></li>
-                        <li><a href="#">Projeler</a></li>
-                        <li><a href="#"> Özel Projeler</a></li>
+                        <li><a href="#">Subscribe for free</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -399,10 +401,10 @@
 
    <div class="cookie-box" id="cookieBox">
   <p>
-    Web sitemiz çerezleri kullanmaktadır. Devam ederek çerez kullanımını kabul etmiş olursunuz.
+    Our website uses cookies. <br> By continuing, you agree to the use of cookies.
   </p>
   <button onclick="document.getElementById('cookieBox').style.display='none'">
-    Anladım
+    Accept
   </button>
 </div>
 
