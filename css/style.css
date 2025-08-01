@@ -338,7 +338,8 @@ h1{
     width: 100%;
 }
 .current-weather {
-  height: 250px;
+    height: 250px;
+    width: 675px;
     color: #fff;
     display: flex;
     border-radius: 5px;

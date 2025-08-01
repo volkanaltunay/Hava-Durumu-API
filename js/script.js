@@ -47,9 +47,9 @@ const createWeatherCard = (cityName, weatherItem, index) => {
      if(index == 0){
         return `    <div class="details">
                     <h2>${cityName} (${date})</h2>
-                    <h4>Sıcaklık: ${temp}°C</h4>
-                    <h4>Rüzgar: ${wind} M/S</h4>
-                    <h4>Nem: ${humidity}%</h4>
+                    <h4>Temperature: ${temp}°C</h4>
+                    <h4>Wind: ${wind} M/S</h4>
+                    <h4>Humidity: ${humidity}%</h4>
                 </div>
                 <div class="icon">
                     <img src="https://openweathermap.org/img/wn/${icon}@4x.png" alt="">
@@ -60,9 +60,9 @@ const createWeatherCard = (cityName, weatherItem, index) => {
         <li class="card"> 
             <h3>${date}</h3>
             <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="">
-            <h4>Sıcaklık: ${temp}°C</h4>
-            <h4>Rüzgar: ${wind} M/S</h4>
-            <h4>Nem: ${humidity}%</h4>
+            <h4>Temp: ${temp}°C</h4>
+            <h4>Wind: ${wind} M/S</h4>
+            <h4>Humidity: ${humidity}%</h4>
         </li>`;
     }
 }
