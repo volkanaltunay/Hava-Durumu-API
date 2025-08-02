@@ -423,12 +423,10 @@ h1{
   gap: 40px;
 }
 
-/* Metin alanı */
 .api3-text-content {
   flex: 1 1 500px;
 }
 
-/* Başlık ve açıklama */
 .api3-subtitle {
   color: #005d92;
   font-weight: bold;
@@ -449,7 +447,6 @@ h1{
   color: #005d92;
 }
 
-/* Tablo stili */
 .api3-table {
   width: 100%;
   border-collapse: collapse;
@@ -469,7 +466,6 @@ h1{
   border-bottom: 1px solid #eee;
 }
 
-/* Görsel kutusu */
 .api3-image-box {
   flex: 1 1 300px;
   display: flex;
@@ -578,9 +574,31 @@ h1{
       background-color: rgba(255, 255, 255, 0.1);
     } 
 
- /* Content Box 1  */
+ /* Content Box   */
 
- .renk{
+ .content-box {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.content-image-box {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-image-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+ .content-box-color{
   	background-color: #6e8fb6;
     padding: 70px 0;
     color: white;
