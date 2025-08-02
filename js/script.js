@@ -10,7 +10,6 @@ const API_KEY = "091a034270564ad17b0c3190d63f17d1";
 // LocalStorage'a şehir ekle
 const saveToSearchHistory = (city) => {
     let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
-    // Aynı şehir birden fazla olmasın
     if (!history.includes(city)) {
         history.unshift(city);
         if (history.length > 5) history.pop(); // Maksimum 5 kayıt tut
@@ -44,26 +43,27 @@ const createWeatherCard = (cityName, weatherItem, index) => {
     const wind = weatherItem.wind.speed;
     const humidity = weatherItem.main.humidity;
 
-     if(index == 0){
-        return `    <div class="details">
-                    <h2>${cityName} (${date})</h2>
-                    <h4>Temperature: ${temp}°C</h4>
-                    <h4>Wind: ${wind} M/S</h4>
-                    <h4>Humidity: ${humidity}%</h4>
-                </div>
-                <div class="icon">
-                    <img src="https://openweathermap.org/img/wn/${icon}@4x.png" alt="">
-                    <h4>${weatherItem.weather[0].description}</h4>
-                </div>`;
-    }else{
+    if(index === 0){
         return `
-        <li class="card"> 
-            <h3>${date}</h3>
-            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="">
-            <h4>Temp: ${temp}°C</h4>
-            <h4>Wind: ${wind} M/S</h4>
-            <h4>Humidity: ${humidity}%</h4>
-        </li>`;
+            <div class="details">
+                <h2>${cityName} (${date})</h2>
+                <h4>Temperature: ${temp}°C</h4>
+                <h4>Wind: ${wind} M/S</h4>
+                <h4>Humidity: ${humidity}%</h4>
+            </div>
+            <div class="icon">
+                <img src="https://openweathermap.org/img/wn/${icon}@4x.png" alt="">
+                <h4>${weatherItem.weather[0].description}</h4>
+            </div>`;
+    } else {
+        return `
+            <li class="card"> 
+                <h3>${date}</h3>
+                <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="">
+                <h4>Temp: ${temp}°C</h4>
+                <h4>Wind: ${wind} M/S</h4>
+                <h4>Humidity: ${humidity}%</h4>
+            </li>`;
     }
 }
 
@@ -94,7 +94,8 @@ const getWeatherDetails = (cityName, lat, lon) => {
                     weatherCardsDiv.insertAdjacentHTML("beforeend", createWeatherCard(cityName, weatherItem, index));
                 }
             });
-        }).catch(() => {
+        })
+        .catch(() => {
             alert("An error occurred while fetching the weather forecast!");
         });
 };
@@ -108,10 +109,13 @@ const getCityCoordinates = () => {
     fetch(GEOCODING_API_URL)
         .then(res => res.json())
         .then(data => {
-            if (!data.length) return alert(`No coordinates found for ${cityName}`);
+            if (!data.length) {
+                alert(`No coordinates found for ${cityName}`);
+                return;
+            }
             const { name, lat, lon } = data[0];
             getWeatherDetails(name, lat, lon);
-            saveToSearchHistory(name);  // Son aramaya kaydet
+            saveToSearchHistory(name);
         })
         .catch(() => {
             alert("An error occurred while fetching the coordinates!");
@@ -143,7 +147,7 @@ const getUserCoordinates = () => {
     );
 }
 
-locationButton.addEventListener("click",getUserCoordinates);
+locationButton.addEventListener("click", getUserCoordinates);
 cityInput.addEventListener("keyup", e => {
     if (e.key === "Enter") {
         getCityCoordinates();
@@ -151,9 +155,14 @@ cityInput.addEventListener("keyup", e => {
 });
 
 // Sayfa yüklendiğinde son aramaları göster
-window.addEventListener("DOMContentLoaded", renderSearchHistory);
+window.addEventListener("DOMContentLoaded", () => {
+    renderSearchHistory();
 
-// Butona tıklayınca çalıştır
+    // Sayfa açılır açılmaz Ankara için hava durumu göster
+    cityInput.value = "Ankara";
+    getCityCoordinates();
+});
+
 searchButton.addEventListener("click", (e) => {
     e.preventDefault(); // Form submit engelle
     getCityCoordinates();
@@ -163,5 +172,5 @@ const settingsToggle = document.getElementById("settings-toggle");
 const settingsMenu = document.getElementById("settings-menu");
 
 settingsToggle.addEventListener("click", () => {
-  settingsMenu.classList.toggle("hidden");
+    settingsMenu.classList.toggle("hidden");
 });
