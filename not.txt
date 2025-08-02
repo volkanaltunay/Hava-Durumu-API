@@ -1,5 +1,12 @@
-// Yazıları lorem olarak değiştir. Kalan ifadeleri de ingilizce yaz.
-//resimli ve yazı olan bölümlerin her birine ayrı isim ver.
-//Hataları alter olmaktaj kaldır. toastr kullan.
-//bekleme sürecinin kullanıcı tarafından görünmesini sağla
+Bazı işlevler tek bir fonksiyonda toplanmış. Okunabilirliği artırmak ve tekrar kullanılabilirliği sağlamak için küçük parçalara bölünmeli.
+
+Kodun bazı bölümlerinde tekrar eden yapılar var. Bunlar tek bir yardımcı fonksiyon haline getirilip ihtiyaç duyulan yerlerde çağrılabilir.
+
+Hatalar alert ile gösterilmiş. Bu kullanıcı deneyimini zayıflatır. Bunun yerine toastr gibi bildirim kütüphaneleri kullanılmalı.
+
+Arama yapıldığında bir süre veri bekleniyor ancak kullanıcıya bu bekleme süresi görsel olarak gösterilmiyor. Bir "loading spinner" ya da metin eklenmeli.
+
+Bazı dosya isimleri İngilizce bazıları Türkçe, Chatgpt kullanmadığını varsaymak istiyorum. Şu aşamada kendinizi geliştirirken hiç faydalı olmaz. 
+
+Login sayfası var ama içerik ingilizce. Dolu gözükecek bir proje yapmak yerine her sayfası aktif projeler yapalım. Front-end tamamen JS yeteneğine bağlı ilerleyebileceğin bir ayrım olur. O yüzden mümkün olduğunca JS kütüphaneleri araştır ve bunları aktif kullanmaya çalış daha iyi olur.
 
