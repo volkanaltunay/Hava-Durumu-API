@@ -3,7 +3,7 @@ const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
-const searchHistoryDiv = document.querySelector(".search-history"); // Son aramalar listesi
+const searchHistoryDiv = document.querySelector(".search-history");
 
 const API_KEY = "091a034270564ad17b0c3190d63f17d1";
 
@@ -12,11 +12,11 @@ const saveToSearchHistory = (city) => {
     let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
     if (!history.includes(city)) {
         history.unshift(city);
-        if (history.length > 5) history.pop(); // Maksimum 5 kayıt tut
+        if (history.length > 5) history.pop();
         localStorage.setItem("searchHistory", JSON.stringify(history));
     }
     renderSearchHistory();
-}
+};
 
 // Son arama geçmişini göster
 const renderSearchHistory = () => {
@@ -34,7 +34,7 @@ const renderSearchHistory = () => {
         });
         searchHistoryDiv.appendChild(cityBtn);
     });
-}
+};
 
 const createWeatherCard = (cityName, weatherItem, index) => {
     const date = weatherItem.dt_txt.split(" ")[0];
@@ -65,7 +65,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 <h4>Humidity: ${humidity}%</h4>
             </li>`;
     }
-}
+};
 
 const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=metric&appid=${API_KEY}`;
@@ -83,6 +83,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
                     fiveDaysForecast.push(forecast);
                 }
             });
+
             cityInput.value = "";
             weatherCardsDiv.innerHTML = "";
             currentWeatherDiv.innerHTML = "";
@@ -96,7 +97,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
             });
         })
         .catch(() => {
-            alert("An error occurred while fetching the weather forecast!");
+            toastr.error("An error occurred while fetching the weather forecast!");
         });
 };
 
@@ -110,7 +111,7 @@ const getCityCoordinates = () => {
         .then(res => res.json())
         .then(data => {
             if (!data.length) {
-                alert(`No coordinates found for ${cityName}`);
+                toastr.warning(`No coordinates found for ${cityName}`);
                 return;
             }
             const { name, lat, lon } = data[0];
@@ -118,7 +119,7 @@ const getCityCoordinates = () => {
             saveToSearchHistory(name);
         })
         .catch(() => {
-            alert("An error occurred while fetching the coordinates!");
+            toastr.error("An error occurred while fetching the coordinates!");
         });
 };
 
@@ -136,38 +137,47 @@ const getUserCoordinates = () => {
                     saveToSearchHistory(name);
                 })
                 .catch(() => {
-                    alert("An error occurred while fetching the city!");
+                    toastr.error("An error occurred while fetching the city!");
                 });
         },
         error => {
             if (error.code === error.PERMISSION_DENIED) {
-                alert("Geolocation request denied. Please reset location permission to grant access again.");
+                toastr.info("Geolocation request denied. Please reset location permission to grant access again.");
             }
         }
     );
-}
+};
 
 locationButton.addEventListener("click", getUserCoordinates);
+
 cityInput.addEventListener("keyup", e => {
     if (e.key === "Enter") {
         getCityCoordinates();
     }
 });
 
-// Sayfa yüklendiğinde son aramaları göster
 window.addEventListener("DOMContentLoaded", () => {
+    // Toastr ayarları
+    toastr.options = {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        timeOut: "4000"
+    };
+
     renderSearchHistory();
 
-    // Sayfa açılır açılmaz Ankara için hava durumu göster
+    // Sayfa açılır açılmaz Ankara'yı getir
     cityInput.value = "Ankara";
     getCityCoordinates();
 });
 
 searchButton.addEventListener("click", (e) => {
-    e.preventDefault(); // Form submit engelle
+    e.preventDefault();
     getCityCoordinates();
 });
 
+// Ayarlar menüsü toggle
 const settingsToggle = document.getElementById("settings-toggle");
 const settingsMenu = document.getElementById("settings-menu");
 
