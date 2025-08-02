@@ -210,7 +210,6 @@ h1{
 }
 .current-weather {
     height: 250px;
-    width: 675px;
     color: #fff;
     display: flex;
     border-radius: 5px;
@@ -268,7 +267,7 @@ h1{
     margin: 5px 0b -12px 0;
 }
 
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
     .weather-data .current-weather {
         padding: 20px;
     }
@@ -278,7 +277,26 @@ h1{
     .weather-cards .card {
         width: calc(100% /  4 - 15px);
     }
+} */
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .weather-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .weather-cards .card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
 }
+
 @media (max-width: 1200px) {
     .weather-cards .card {
         width: calc(100% /  3 - 15px);
