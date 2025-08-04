@@ -177,10 +177,3 @@ searchButton.addEventListener("click", (e) => {
     getCityCoordinates();
 });
 
-// Ayarlar menüsü toggle
-const settingsToggle = document.getElementById("settings-toggle");
-const settingsMenu = document.getElementById("settings-menu");
-
-settingsToggle.addEventListener("click", () => {
-    settingsMenu.classList.toggle("hidden");
-});
