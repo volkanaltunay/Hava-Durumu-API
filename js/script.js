@@ -114,6 +114,9 @@ const getCityCoordinates = () => {
                 toastr.warning(`No coordinates found for ${cityName}`);
                 return;
             }
+            else{
+                toastr.success (`Loading the found coordinates ${cityName}`);
+            }
             const { name, lat, lon } = data[0];
             getWeatherDetails(name, lat, lon);
             saveToSearchHistory(name);

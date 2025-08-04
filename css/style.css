@@ -17,8 +17,8 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* saydamlık */
-  backdrop-filter: blur(8px); /* bulanıklık efekti */
+  background: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(8px); 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,17 +256,6 @@ h1{
     margin: 5px 0b -12px 0;
 }
 
-/* @media (max-width: 1400px) {
-    .weather-data .current-weather {
-        padding: 20px;
-    }
-    .weather-cards {
-        flex-wrap: 20px;
-    }
-    .weather-cards .card {
-        width: calc(100% /  4 - 15px);
-    }
-} */
 @media (max-width: 1400px) {
   .weather-data .current-weather {
     padding: 20px;
